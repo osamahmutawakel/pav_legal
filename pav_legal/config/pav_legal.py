@@ -4,22 +4,17 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"label": _("Issues"),
+			"label": _("Case"),
 			"items": [
 				{
 					"type": "doctype",
-					"name": "Case",					
+					"name": "Case",
 					"onboard": 1,
-				},
+				},				
 				{
 					"type": "doctype",
-					"name": "Issue Type",
-					"description": _("Issue Type."),
-				},
-				{
-					"type": "doctype",
-					"name": "Issue Priority",
-					"description": _("Issue Priority."),
+					"name": "Case Log",
+					"onboard": 1,
 				}
 			]
 		},
@@ -28,23 +23,19 @@ def get_data():
 			"items": [
 				{
 					"type": "doctype",
-					"name": "Case Type",					
+					"name": "Case Type",
 				},
 				{
 					"type": "doctype",
-					"name": "Lawyer",					
+					"name": "Legal Party",
 				},
 				{
 					"type": "doctype",
-					"name": "Prosecution",					
+					"name": "Lawyer",
 				},
 				{
 					"type": "doctype",
-					"name": "Police Station",					
-				},
-				{
-					"type": "doctype",
-					"name": "Court",					
+					"name": "Case Level",
 				},
 			]
 		}
