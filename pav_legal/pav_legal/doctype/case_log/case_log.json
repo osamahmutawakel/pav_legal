@@ -9,16 +9,17 @@
   "naming_series",
   "case",
   "case_title",
-  "column_break_2",
-  "legal_party",
-  "legal_party_type",
-  "lawyer",
-  "reason",
-  "column_break_4",
-  "date_of_contract",
-  "section_break_6",
-  "reasons_for_the_emergence_case",
+  "case_id",
+  "case_date",
+  "case_level",
   "latest_developments",
+  "column_break_2",
+  "legal_party_type",
+  "legal_party",
+  "lawyer",
+  "section_break_6",
+  "compay_legal_status",
+  "column_break_12",
   "legal_recommendation"
  ],
  "fields": [
@@ -27,7 +28,7 @@
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "case.-.YY.-"
+   "options": "case./"
   },
   {
    "fieldname": "case",
@@ -40,7 +41,7 @@
   {
    "fetch_from": "case.case_title",
    "fieldname": "case_title",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Case Title"
   },
   {
@@ -48,28 +49,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "reason",
-   "fieldtype": "Text",
-   "label": "Reason"
-  },
-  {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "date_of_contract",
-   "fieldtype": "Date",
-   "label": "Date of Contract"
-  },
-  {
    "fieldname": "section_break_6",
    "fieldtype": "Section Break",
    "label": "Case Details"
-  },
-  {
-   "fieldname": "reasons_for_the_emergence_case",
-   "fieldtype": "Text",
-   "label": "Reasons for the emergence Case"
   },
   {
    "fieldname": "latest_developments",
@@ -78,7 +60,7 @@
   },
   {
    "fieldname": "legal_recommendation",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "Legal Recommendation"
   },
   {
@@ -100,12 +82,37 @@
    "fetch_from": "case.default_lawyer",
    "fetch_if_empty": 1,
    "fieldname": "lawyer",
-   "fieldtype": "Link",
+   "fieldtype": "Table MultiSelect",
    "label": "Lawyer",
-   "options": "Lawyer"
+   "options": "Case Lawyer"
+  },
+  {
+   "fieldname": "compay_legal_status",
+   "fieldtype": "Text",
+   "label": "Compay Legal Status"
+  },
+  {
+   "fieldname": "case_id",
+   "fieldtype": "Data",
+   "label": "Case ID"
+  },
+  {
+   "fieldname": "case_date",
+   "fieldtype": "Date",
+   "label": "Case Date"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "case_level",
+   "fieldtype": "Link",
+   "label": "Case Level",
+   "options": "Case Level"
   }
  ],
- "modified": "2021-08-12 12:29:00.800978",
+ "modified": "2021-08-12 19:32:45.099529",
  "modified_by": "Administrator",
  "module": "PAV Legal",
  "name": "Case Log",

@@ -1,37 +1,27 @@
 {
  "allow_rename": 1,
- "autoname": "field:legal_party_name",
- "creation": "2021-08-12 12:23:38.066899",
+ "autoname": "field:litigant_name",
+ "creation": "2021-08-12 18:32:31.734696",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "legal_party_name",
-  "legal_party_type"
+  "litigant_name"
  ],
  "fields": [
   {
-   "fieldname": "legal_party_name",
+   "fieldname": "litigant_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Legal Party Name",
+   "label": "Litigant Name",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "legal_party_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Legal Party Type",
-   "options": "Police Station\nCourt\nProsecution",
-   "reqd": 1,
-   "set_only_once": 1
   }
  ],
- "modified": "2021-08-12 19:24:38.008918",
+ "modified": "2021-08-12 18:32:48.729362",
  "modified_by": "Administrator",
  "module": "PAV Legal",
- "name": "Legal Party",
+ "name": "Litigant",
  "owner": "Administrator",
  "permissions": [
   {
@@ -50,6 +40,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "legal_party_name",
+ "title_field": "litigant_name",
  "track_changes": 1
 }
