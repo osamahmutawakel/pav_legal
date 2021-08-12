@@ -1,0 +1,132 @@
+{
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-08-12 12:25:27.547217",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "case",
+  "case_title",
+  "column_break_2",
+  "legal_party",
+  "legal_party_type",
+  "lawyer",
+  "reason",
+  "column_break_4",
+  "date_of_contract",
+  "section_break_6",
+  "reasons_for_the_emergence_case",
+  "latest_developments",
+  "legal_recommendation"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "case.-.YY.-"
+  },
+  {
+   "fieldname": "case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Case",
+   "options": "Case",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "case.case_title",
+   "fieldname": "case_title",
+   "fieldtype": "Data",
+   "label": "Case Title"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_contract",
+   "fieldtype": "Date",
+   "label": "Date of Contract"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Case Details"
+  },
+  {
+   "fieldname": "reasons_for_the_emergence_case",
+   "fieldtype": "Text",
+   "label": "Reasons for the emergence Case"
+  },
+  {
+   "fieldname": "latest_developments",
+   "fieldtype": "Text",
+   "label": "latest Developments"
+  },
+  {
+   "fieldname": "legal_recommendation",
+   "fieldtype": "Small Text",
+   "label": "Legal Recommendation"
+  },
+  {
+   "fieldname": "legal_party",
+   "fieldtype": "Link",
+   "label": "Legal Party",
+   "options": "Legal Party",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "legal_party.legal_party_type",
+   "fieldname": "legal_party_type",
+   "fieldtype": "Select",
+   "label": "Legal Party Type",
+   "options": "Police Station\nCourt\nProsecution",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "case.default_lawyer",
+   "fetch_if_empty": 1,
+   "fieldname": "lawyer",
+   "fieldtype": "Link",
+   "label": "Lawyer",
+   "options": "Lawyer"
+  }
+ ],
+ "modified": "2021-08-12 12:29:00.800978",
+ "modified_by": "Administrator",
+ "module": "PAV Legal",
+ "name": "Case Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "case_title",
+ "track_changes": 1
+}
